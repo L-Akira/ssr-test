@@ -5,13 +5,13 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import fs from 'fs';
 import path from 'path';
-import FrontRouter from '../test-app/src/router';
+import FrontRouter from '../generic-frontend-app/src/router';
 
 config();
 
 const app = express();
 
-app.use(express.static('../test-app/build'))
+app.use(express.static('../generic-frontend-app/build'))
 
 app.get('/*',(req,res)=>{
     const context = {}
@@ -23,7 +23,7 @@ app.get('/*',(req,res)=>{
         </StaticRouter>
     );
 
-    const HTML = path.resolve('../test-app/build/index.html');
+    const HTML = path.resolve('../generic-frontend-app/build/index.html');
 
     fs.readFile(HTML,'utf8',(err,data)=>{
         if(err)
