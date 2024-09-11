@@ -9,7 +9,7 @@
     "ignore-styles": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "4.3.1",
+    "react-router-dom": "6.0.0",
     "snyk": "^1.360.0"
   },
   "scripts": {
